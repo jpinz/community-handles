@@ -4,7 +4,7 @@ import { Check, X } from "lucide-react"
 import { agent } from "@/lib/atproto"
 import { prisma } from "@/lib/db"
 import { hasExplicitSlur } from "@/lib/slurs"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Profile } from "@/components/profile"
 import { Stage } from "@/components/stage"
@@ -205,21 +205,14 @@ export default async function IndexPage({
             &quot;Verify DNS Record&quot;.
           </p>
           <p className="mt-6 max-w-lg text-sm">
-            Brought to you by
+            Brought to you by{" "}
             <a href="https://bsky.app/profile/julian.devs.foo" className="underline">
               @julian.devs.foo
             </a>
-            .
+
             <Link href="https://github.com/jpinz" target="_blank" rel="noreferrer">
-              <div
-                className={buttonVariants({
-                  size: "sm",
-                  variant: "ghost",
-                })}
-              >
                 <Icons.gitHub className="size-5" />
                 <span className="sr-only">GitHub</span>
-              </div>
             </Link>
           </p>
           <p className="mt-6 max-w-lg text-sm">
